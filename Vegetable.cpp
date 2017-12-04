@@ -1,9 +1,7 @@
 #include "Vegetable.h"
 #include "ProduceStand.h"
 
-Vegetable::Vegtable():ProduceStand(" ",0,0,0,0,0,0,
-                      Person(" "," "," ",Addres(0," "," "," ",0),
-                      Date(0,0,0))){
+Vegetable::Vegtable():ProduceStand(){
   totalVegtSales += totalVegtSales;
   vegtCount++;
 }
