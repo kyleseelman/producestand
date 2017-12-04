@@ -1,7 +1,7 @@
 #include "Vegetable.h"
 #include "ProduceStand.h"
 
-Vegetable::Vegtable():ProduceStand(){
+Vegetable::Vegetable():ProduceStand(){
   totalVegtSales += totalVegtSales;
   vegtCount++;
 }
@@ -50,7 +50,8 @@ void Vegetable::calculateSales(ofstream& out){
   double total;
   total = eachSale + eachSalesTax;
   dailySales+=total;
-  out << "    Total: " << right << total << endl;
+  //showpoint
+  out << "    Total: " << right << showpoint << setprecision(2) << total << endl;
 }
 
 void Vegetable::printReceipt(ofstream& out){
