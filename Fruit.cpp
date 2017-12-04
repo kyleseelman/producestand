@@ -31,7 +31,7 @@ Fruit::Fruit(ifstream& in, ofstream& out){
 }
 
 void Fruit::printInfo(ofstream& out){
-  out << "Number of fruit sales for the day: " << Fruit.getfruitCount()
-      << endl << "Total fruit sales of " << Fruit.getTotalFruitSales()
+  out << "Number of fruit sales for the day: " << Fruit::getfruitCount()
+      << endl << "Total fruit sales of " << Fruit::getTotalFruitSales()
       << " for the day\n";
 }
