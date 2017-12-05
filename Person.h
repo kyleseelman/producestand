@@ -17,12 +17,15 @@ class Person
   public:
     Person();
     Person(string last, string first, string email);
-
+    Person(string l,string f,string em,int sNum,string sName,string city,
+    string st,int zip):last(l),first(f),email(em),
+    address(sNum,sName,city,st,zip){};
+  
     void setLast(string last);
     void setFirst(string first);
     void setAddress(int house, string street, string city, string state,
       int zip);
-    void setBDay(int month, int day, int year);
+    
 
 };
 
