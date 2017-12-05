@@ -16,10 +16,10 @@ void Person::setFirst(string first){
 void Person::setAddress(int house, string street, string city, string state,
   int zip){
     this->address.setHouse(house);
-    this->address.setStreet(street)
+    this->address.setStreet(street);
     this->address.setCity(city);
     this->address.setState(state);
-    this->adrress.setZip(zip);
+    this->address.setZip(zip);
 }
 void Person::setBDay(int month, int day, int year){
 
