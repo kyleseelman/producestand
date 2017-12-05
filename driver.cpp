@@ -1,10 +1,9 @@
 #include "ProduceStand.h"
 
 int main(int argc, char* argv[]){
-  ifstream input;
-  ofstream receiptOut;
-  ofstream customers;
-  ofstream infoStats;
+  ifstream input.open(argv[1]);
+  ofstream receiptOut.open(argv[2]);
+  ofstream customers.open(argv[3]);
   string type;
   char choice;
   int count=0;
