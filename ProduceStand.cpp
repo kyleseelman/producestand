@@ -5,22 +5,14 @@ double ProduceStand::dailySales=0;
 double ProduceStand::dailySalesTax=0;
 
 ProduceStand::ProduceStand():name(" "), weight(0),pricePerlb(0), 
-              pricePerEach(0),howMany(0){
-  //dailySales += dailySales;
-  //dailySalesTax += dailySalesTax;
-  receiptNum++;
-}
+              pricePerEach(0),howMany(0){}
 
 ProduceStand::ProduceStand(string n,double w,double ppw,double ppe,int num):
               name(n),weight(w),pricePerlb(ppw),pricePerEach(ppe),howMany(num){
-  //dailySales += dailySales;
-  //dailySalesTax += dailySalesTax;
   receiptNum++;
 }
 
-ProduceStand::~ProduceStand(){
-  receiptNum--;
-}
+ProduceStand::~ProduceStand(){}
 
 void ProduceStand::setStandName(string name){
   standName=name;
