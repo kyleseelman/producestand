@@ -12,8 +12,10 @@ int main(int argc, char* argv[]){
   string type=" ";
   char choice;
   int count=0;
+  ProduceStand temp;
   
   while(!input.eof()){
+    temp.printHeader(receiptOut);
     input >> type;
     if(type=="Vegetable"){
       Vegetable v(input,receiptOut);
@@ -38,9 +40,16 @@ int main(int argc, char* argv[]){
     } 
   }
   
+
+  temp.printStats(receiptOut);
+  Vegetable vt;
+  vt.printInfo(receiptOut);
+  Fruit ft;
+  ft.printInfo(receiptOut);
+  
   input.close();
   receiptOut.close();
   emailList.close();
-
+  
   return 0;
 }
