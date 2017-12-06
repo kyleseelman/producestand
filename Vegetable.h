@@ -19,7 +19,7 @@ class Vegetable : public ProduceStand
     Vegetable():ProduceStand(){};
     Vegetable(ifstream& in, ofstream& out);
     Vegetable(string, double, double, double, int);
-    virtual ~Vegetable() {vegtCount--;}
+    virtual ~Vegetable() {}
 
     virtual void calculateTax(ofstream& out);
     virtual void calculateSale(ofstream& out);
