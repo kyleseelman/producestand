@@ -40,7 +40,7 @@ int main(int argc, char* argv[]){
   
   input.close();
   receiptOut.close();
-  email.close();
+  emailList.close();
 
   return 0;
 }
