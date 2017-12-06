@@ -23,3 +23,6 @@ int Date::getDay(){
 int Date::getYear(){
   return year;
 }
+void Date::printDate(ostream& out){
+  out << month << "/" << day <<"/" << year << endl<<endl;
+}
