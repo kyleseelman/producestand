@@ -35,13 +35,13 @@ double ProduceStand::getDailySalesTax(){
 }
 
 void ProduceStand::printHeader(ofstream& out){
-  for(int i=0;i<80;i++){
+  for(int i=0;i<=85;i++){
     out << "*";
   }
   out << endl
       << standName << endl << "Clemson, SC\n"
       << "Receipt #" << ProduceStand::receiptNum << endl;
-  for(int i=0;i<80;i++){
+  for(int i=0;i<=85;i++){
     out << "*";
   }
   out << endl << endl;
