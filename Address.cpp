@@ -29,3 +29,8 @@ void Address::setState(string state){
 void Address::setZip(int zip){
   this->zip = zip;
 }
+
+void Address::printAddress(ostream& out){
+  out << house << " " << street << endl
+      << city << ", " << state << " " << zip << endl;
+}
