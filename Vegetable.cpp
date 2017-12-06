@@ -1,10 +1,5 @@
 #include "Vegetable.h"
 
-/*Vegetable::Vegetable():ProduceStand(){
-  totalVegtSales += totalVegtSales;
-  vegtCount++;
-}*/
-
 int Vegetable::vegtCount=0;
 double Vegetable::totalVegtSales=0;
 
