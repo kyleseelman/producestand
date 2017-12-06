@@ -47,8 +47,8 @@ void Fruit::calculateTax(ofstream& out){
 void Fruit::calculateSale(ofstream& out){
   double total;
   total = eachSale + eachSalesTax;
-  dailySales += total;
-  totalFruitSales += total;
+  dailySales += eachSale;
+  totalFruitSales += eachSale;
 
   out << setw(80) << left << "     Total: " 
       << right << fixed << setprecision(2) << total<< endl;
