@@ -41,8 +41,8 @@ void Vegetable::calculateTax(ofstream& out){
 void Vegetable::calculateSale(ofstream& out){
   double total;
   total = eachSale + eachSalesTax;
-  dailySales+=total;
-  totalVegtSales+=total;
+  dailySales+=eachSale;
+  totalVegtSales+=eachSale;
   
   out <<setw(80) <<left<<"    Total: " 
       << right << fixed << setprecision(2) << total << endl;
