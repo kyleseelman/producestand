@@ -50,7 +50,8 @@ void Fruit::calculateSale(ofstream& out){
   dailySales += total;
   totalFruitSales += total;
 
-  out << "     Total: " << right << fixed << setprecision(2) << total<< endl;
+  out << setw(80) << left << "     Total: " 
+      << right << fixed << setprecision(2) << total<< endl;
 }
 
 void Fruit::printReceipt(ofstream& out){
