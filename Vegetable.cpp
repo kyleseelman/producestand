@@ -1,3 +1,4 @@
+
 #include "Vegetable.h"
 
 int Vegetable::vegtCount=0;
@@ -10,8 +11,7 @@ Vegetable::Vegetable(ifstream& in, ofstream& out){
   temp.printReceipt(out);
   temp.calculateTax(out);
   temp.calculateSale(out);
- 
-  totalVegtSales += totalVegtSales;
+
   vegtCount++;
 }
 
@@ -43,6 +43,8 @@ void Vegetable::calculateSale(ofstream& out){
   double total;
   total = eachSale + eachSalesTax;
   dailySales+=total;
+  totalVegtSales+=total;
+  
   out <<left<<"    Total: " << right << fixed << setprecision(2) << total << endl;
 }
 
