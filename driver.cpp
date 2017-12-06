@@ -42,10 +42,11 @@ int main(int argc, char* argv[]){
   
 
   temp.printStats(receiptOut);
-  Vegetable vt;
-  vt.printInfo(receiptOut);
   Fruit ft;
   ft.printInfo(receiptOut);
+  Vegetable vt;
+  vt.printInfo(receiptOut);
+  receiptOut << "Total customers added to the mailing list: " << count << endl;
   
   input.close();
   receiptOut.close();
