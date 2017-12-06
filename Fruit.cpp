@@ -3,10 +3,7 @@
 double Fruit::totalFruitSales = 0;
 int Fruit::fruitCount = 0;
 
-Fruit::Fruit():ProduceStand(){
-  totalFruitSales += totalFruitSales;
-  fruitCount++;
-}
+Fruit::Fruit():ProduceStand(){}
 Fruit::Fruit(string name, double weight, double pricePerlb, double pricePerEach
   , int howMany){
     this->name = name;
@@ -14,11 +11,7 @@ Fruit::Fruit(string name, double weight, double pricePerlb, double pricePerEach
     this->pricePerlb = pricePerlb;
     this->pricePerEach = pricePerEach;
     this->howMany = howMany;
-
-    fruitCount++;
-    totalFruitSales += totalFruitSales;
-
-  }
+}
 Fruit::Fruit(ifstream& in, ofstream& out){
   in >> name >> weight >> pricePerlb >> pricePerEach >> howMany;
 
@@ -26,8 +19,7 @@ Fruit::Fruit(ifstream& in, ofstream& out){
   temp.printReceipt(out);
   temp.calculateTax(out);
   temp.calculateSale(out);
-
-  totalFruitSales += totalFruitSales;
+  
   fruitCount++;
 }
 
@@ -56,6 +48,7 @@ void Fruit::calculateSale(ofstream& out){
   double total;
   total = eachSale + eachSalesTax;
   dailySales += total;
+  totalFruitSales += total;
 
   out << "     Total: " << right << fixed << setprecision(2) << total<< endl;
 }
