@@ -29,13 +29,9 @@ string Person::getEmail(){
   return email;
 }
 
-void Person::printEmail(ofstream& out){
-  //This function does not work for some reason
-  //Person ptemp;
-  //out << ptemp.getLast() << ", " << ptemp.getFirst() << endl;
-  /*out << ptemp.getLast() << ", " << ptemp.getFirst() << endl
-      << ptemp.address.getHouse() << " " << ptemp.address.getStreet() << endl
-      << ptemp.address.getCity() << ", " << ptemp.address.getState() << " " <<ptemp.address.getZip() << endl
-      << ptemp.getEmail() << endl
-      << ptemp.bday.getMonth() << "/" << ptemp.bday.getDay() << "/" << ptemp.bday.getYear()<<endl;*/
+void Person::printEmail(ostream& out){
+  out << last << ", " << first << endl;
+  address.printAddress(out);
+  out << email << endl;
+  bday.printDate(out);
 }
