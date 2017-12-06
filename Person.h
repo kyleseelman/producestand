@@ -28,7 +28,7 @@ class Person
     string getFirst();
     string getEmail();
 
-    void printEmail(ofstream&);
+    void printEmail(ostream&);
 };
 
 #endif
