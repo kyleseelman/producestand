@@ -8,7 +8,7 @@ int main(int argc, char* argv[]){
   ofstream receiptOut;
   receiptOut.open(argv[2]);
   ofstream emailList;
-  email.open(argv[3]);
+  emailList.open(argv[3]);
   string type=" ";
   char choice;
   int count=0;
