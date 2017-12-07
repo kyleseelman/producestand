@@ -1,3 +1,12 @@
+/*
+  Linda Fang and Kyle Seelman
+  CPSC 1020 
+  Programming Assingment 4
+  kseelma and fang4
+  Dr. Feaster
+*/
+
+
 #include "Fruit.h"
 
 //initializes the static variables
