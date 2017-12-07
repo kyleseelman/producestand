@@ -1,3 +1,11 @@
+/*
+  Linda Fang and Kyle Seelman
+  CPSC 1020 
+  Programming Assingment 4
+  kseelma and fang4
+  Dr. Feaster
+*/
+
 #ifndef ADDRESS_H
 #define ADDRESS_H
 #include <string>
@@ -31,7 +39,7 @@ class Address
     string getCity(){return city;}
     string getState(){return state;}
     int getZip(){return zip;}
-
+    //print function
     void printAddress(ostream&);
 };
 
