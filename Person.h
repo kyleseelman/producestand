@@ -1,3 +1,12 @@
+/*
+ Linda Fang and Kyle Seelman
+ CPSC 1020
+ Programming Assingment 4
+ kseelma and fang4
+ Dr. Feaster
+*/
+
+
 #ifndef PERSON_H
 #define PERSON_H
 
@@ -18,6 +27,7 @@ class Person
     Date bday;
 
   public:
+    //constructors
     Person();
     Person(string last, string first, string email);
     Person(string l,string f,string em,int sNum,string sName,string city,
@@ -25,11 +35,14 @@ class Person
     address(sNum,sName,city,st,zip),bday(m,d,y){};
     Person(ifstream&, ofstream&);
 
+    //setters and getters
     void setLast(string last);
     void setFirst(string first);
     string getLast();
     string getFirst();
     string getEmail();
+  
+    //print function
     void printEmail(vector<Person>& p,ostream& out);
 
 };
