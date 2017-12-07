@@ -16,8 +16,8 @@ int main(int argc, char* argv[]){
   ProduceStand temp;
     
   while(!input.eof()){
-    temp.printHeader(receiptOut);
     input >> type;
+    temp.printHeader(receiptOut);
     if(type=="Vegetable"){
       Vegetable v(input,receiptOut);
     }
