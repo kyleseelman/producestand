@@ -30,7 +30,7 @@ class Address
     string getCity(){return city;}
     string getState(){return state;}
     int getZip(){return zip;}
-  
+
     void printAddress(ostream&);
 };
 

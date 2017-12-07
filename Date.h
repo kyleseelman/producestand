@@ -22,6 +22,7 @@ class Date
     int getMonth();
     int getDay();
     int getYear();
+
     void printDate(ostream&);
 };
 #endif

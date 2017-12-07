@@ -16,7 +16,7 @@ class Fruit : public ProduceStand
   public:
 
     Fruit();
-    ~Fruit(){fruitCount--;}
+    ~Fruit(){}
     Fruit(ifstream&, ofstream& out);
     Fruit(string, double, double, double, int);
     static double getTotalFruitSales(){return totalFruitSales;}
