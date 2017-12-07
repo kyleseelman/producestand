@@ -1,5 +1,5 @@
 #include "Address.h"
-
+//constructors
 Address::Address():house(0),street(" "),city(" "), state(" "),zip(0){}
 
 Address::Address(int house, string street, string city, string state, int zip){
@@ -10,6 +10,7 @@ Address::Address(int house, string street, string city, string state, int zip){
   this->zip = zip;
 }
 
+//setters for the Address variables
 void Address::setHouse(int house){
   this->house = house;
 }
@@ -30,6 +31,7 @@ void Address::setZip(int zip){
   this->zip = zip;
 }
 
+//print function for the address variables
 void Address::printAddress(ostream& out){
   out << house << " " << street << endl
       << city << ", " << state << " " << zip << endl;
