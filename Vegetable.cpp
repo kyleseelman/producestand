@@ -15,12 +15,12 @@ double Vegetable::totalVegtSales=0;
 //constructors
 Vegetable::Vegetable(ifstream& in, ofstream& out){
   in>>name>>weight >> pricePerlb >> pricePerEach >> howMany;
-
+  //sends read in data to the vegetable constructor
   Vegetable temp(name,weight,pricePerlb,pricePerEach,howMany);
   temp.printReceipt(out);
   temp.calculateTax(out);
   temp.calculateSale(out);
-
+  //increments the static variables
   receiptNum++; 
   vegtCount++;
 }
@@ -37,10 +37,12 @@ int Vegetable::getVegtCount(){
 
 //calculate tax for each vegetable sale
 void Vegetable::calculateTax(ofstream& out){
+  //calculates price if its based on quantity
   if(weight==0 && pricePerlb==0){
     eachSale = pricePerEach*howMany;
     eachSalesTax=eachSale*.08;
   }
+  //calculates price based on weight
   else{
     eachSale=pricePerlb*weight;
     eachSalesTax=eachSale*.08;
