@@ -4,6 +4,7 @@
 #include "Date.h"
 using namespace std;
 
+
 class Address
 {
   private:
@@ -24,7 +25,7 @@ class Address
     void setCity(string city);
     void setState(string state);
     void setZip(int zip);
-
+    //getters
     int getHouse(){return house;}
     string getStreet(){return street;}
     string getCity(){return city;}
