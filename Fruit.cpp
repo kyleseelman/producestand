@@ -25,7 +25,7 @@ Fruit::Fruit(string name, double weight, double pricePerlb, double pricePerEach,
 //constructor to read in the file 
 Fruit::Fruit(ifstream& in, ofstream& out){
   in >> name >> weight >> pricePerlb >> pricePerEach >> howMany;
-
+  //sends the read in data to the fruit constructor
   Fruit temp(name,weight,pricePerlb,pricePerEach,howMany);
   temp.printReceipt(out);
   temp.calculateTax(out);
