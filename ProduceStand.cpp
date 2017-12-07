@@ -1,3 +1,12 @@
+/*
+ Linda Fang and Kyle Seelman
+ CPSC 1020
+ Programming Assingment 4
+ kseelma and fang4
+ Dr. Feaster
+*/
+
+
 #include "ProduceStand.h"
 
 //initializaiton of the static variables 
@@ -16,12 +25,12 @@ ProduceStand::ProduceStand(string n,double w,double ppw,double ppe,int num):
 //destructor
 ProduceStand::~ProduceStand(){}
 
-//initialization of the setters
+//implementation of the setters
 void ProduceStand::setStandName(string name){
   standName=name;
 }
 
-//initialization of the getters
+//implementation of the getters
 string ProduceStand::getStandName(){
   return standName;
 }
