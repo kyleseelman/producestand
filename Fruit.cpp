@@ -1,8 +1,10 @@
 #include "Fruit.h"
 
+//initializes the static variables
 double Fruit::totalFruitSales = 0;
 int Fruit::fruitCount = 0;
 
+//constructors
 Fruit::Fruit():ProduceStand(){}
 Fruit::Fruit(string name, double weight, double pricePerlb, double pricePerEach, int howMany){
     this->name = name;
@@ -11,6 +13,7 @@ Fruit::Fruit(string name, double weight, double pricePerlb, double pricePerEach,
     this->pricePerEach = pricePerEach;
     this->howMany = howMany;
 }
+//constructor to read in the file 
 Fruit::Fruit(ifstream& in, ofstream& out){
   in >> name >> weight >> pricePerlb >> pricePerEach >> howMany;
 
@@ -23,12 +26,14 @@ Fruit::Fruit(ifstream& in, ofstream& out){
   fruitCount++;
 }
 
+//print function of fruit variables
 void Fruit::printInfo(ofstream& out){
   out << "Number of fruit sales for the day: " << Fruit::getfruitCount()
       << endl << "Total fruit sales of $" << Fruit::getTotalFruitSales()
       << " for the day\n";
 }
 
+//calculate the tax for each sale
 void Fruit::calculateTax(ofstream& out){
   if(weight == 0 && pricePerlb == 0){
     eachSale = pricePerEach * howMany;
@@ -45,6 +50,7 @@ void Fruit::calculateTax(ofstream& out){
       << endl;
 }
 
+//calculate the total sales of the fruit
 void Fruit::calculateSale(ofstream& out){
   double total;
   total = eachSale + eachSalesTax;
@@ -56,6 +62,7 @@ void Fruit::calculateSale(ofstream& out){
       << endl <<endl;
 }
 
+//print the receipt for the fruit sale 
 void Fruit::printReceipt(ofstream& out){
   if(weight == 0 && pricePerlb == 0){
     eachSale = pricePerEach * howMany;
