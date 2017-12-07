@@ -4,6 +4,9 @@
 #include "Address.h"
 #include "Date.h"
 #include <string>
+#include<vector>
+#include<fstream>
+#include<iostream>
 
 class Person
 {
@@ -27,8 +30,8 @@ class Person
     string getLast();
     string getFirst();
     string getEmail();
+    void printEmail(vector<Person>& p,ostream& out);
 
-    void printEmail(ostream&);
 };
 
 #endif

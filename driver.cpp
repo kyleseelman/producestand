@@ -1,22 +1,17 @@
-/*
-  Linda Fang and Kyle Seelman
-  CPSC 1020 
-  Programming Assingment 4
-  kseelma and fang4
-  Dr. Feaster
-*/
-
 #include "ProduceStand.h"
 #include "Vegetable.h"
 #include "Fruit.h"
+#include "Person.h"
+#include <vector>
 
-//function to read in the input file and call appropiate function
+
 void readData(ifstream &input, ofstream &receiptOut, ofstream &emailList){
   string type=" ";
   char choice;
   int count=0;
   ProduceStand temp;
-  //
+  vector <Person> p;
+
   input >> type;
   while(!input.eof()){
     temp.printHeader(receiptOut);
@@ -34,14 +29,15 @@ void readData(ifstream &input, ofstream &receiptOut, ofstream &emailList){
       string sName,city,st,l,f,em;
       input >> l >> f >> em >> sNum >> sName >> city >> st >> zip
       >> m >> d >> y;
-      Person p(l,f,em,sNum,sName,city,st,zip,m,d,y);
-      p.printEmail(emailList);
+      p.push_back(Person(l,f,em,sNum,sName,city,st,zip,m,d,y));
     }
     else if(choice=='n'){
       choice='n';
     }
     input >> type;
   }
+  Person ptemp;
+  ptemp.printEmail(p,emailList);
 
   temp.printStats(receiptOut);
   Fruit ft;
@@ -50,6 +46,7 @@ void readData(ifstream &input, ofstream &receiptOut, ofstream &emailList){
   vt.printInfo(receiptOut);
   receiptOut << "Total customers added to the mailing list: " << count << endl;
 }
+
 
 int main(int argc, char* argv[]){
   ifstream input;
