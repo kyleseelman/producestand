@@ -14,7 +14,7 @@ Person::Person(string last, string first, string email):bday(0,0,0){
     address.setZip(0);
 }
 
-//initialization of the setters
+//implementation of the setters
 void Person::setLast(string last){
   this->last = last;
 }
