@@ -1,7 +1,16 @@
+/*
+  Linda Fang and Kyle Seelman
+  CPSC 1020 
+  Programming Assingment 4
+  kseelma and fang4
+  Dr. Feaster
+*/
+
+
 #include "Address.h"
+
 //constructors
 Address::Address():house(0),street(" "),city(" "), state(" "),zip(0){}
-
 Address::Address(int house, string street, string city, string state, int zip){
   this->house = house;
   this->street = street;
@@ -10,7 +19,7 @@ Address::Address(int house, string street, string city, string state, int zip){
   this->zip = zip;
 }
 
-//setters for the Address variables
+//implementation for the setters
 void Address::setHouse(int house){
   this->house = house;
 }
