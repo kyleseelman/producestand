@@ -1,13 +1,22 @@
+/*
+  Linda Fang and Kyle Seelman
+  CPSC 1020 
+  Programming Assingment 4
+  kseelma and fang4
+  Dr. Feaster
+*/
+
 #include "ProduceStand.h"
 #include "Vegetable.h"
 #include "Fruit.h"
 
+//function to read in the input file and call appropiate function
 void readData(ifstream &input, ofstream &receiptOut, ofstream &emailList){
   string type=" ";
   char choice;
   int count=0;
   ProduceStand temp;
-
+  //
   input >> type;
   while(!input.eof()){
     temp.printHeader(receiptOut);
