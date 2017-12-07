@@ -36,7 +36,8 @@ void Vegetable::calculateTax(ofstream& out){
     eachSalesTax=eachSale*.08;
   }
   dailySalesTax += eachSalesTax;
-  out << setw(64) <<right << fixed << setprecision(2) << eachSalesTax << endl;
+  out << setw(64) <<right << fixed << setprecision(2) << eachSalesTax 
+      << endl;
 }
 
 void Vegetable::calculateSale(ofstream& out){
@@ -49,12 +50,19 @@ void Vegetable::calculateSale(ofstream& out){
 }
 
 void Vegetable::printReceipt(ofstream& out){
-  out << setw(75) << left << name << right << eachSale << endl
+  if(weight==0 && pricePerlb==0){
+    eachSale = pricePerEach*howMany;
+  }
+  else{
+    eachSale=pricePerlb*weight;
+  }
+  out << setw(75) << left << name 
+      << right << fixed << setprecision(2) << eachSale << endl
       << left <<"    Sales Tax: ";
 }
 
 void Vegetable::printInfo(ofstream& out){
   out << "Number of vegetable sales for the day: " << Vegetable::getVegtCount()
-      << endl << "Total vegetable sales of " << Vegetable::getTotalVegtSales()
+      << endl << "Total vegetable sales of $" << Vegetable::getTotalVegtSales()
       << " for the day\n";
 }

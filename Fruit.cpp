@@ -25,7 +25,7 @@ Fruit::Fruit(ifstream& in, ofstream& out){
 
 void Fruit::printInfo(ofstream& out){
   out << "Number of fruit sales for the day: " << Fruit::getfruitCount()
-      << endl << "Total fruit sales of " << Fruit::getTotalFruitSales()
+      << endl << "Total fruit sales of $" << Fruit::getTotalFruitSales()
       << " for the day\n";
 }
 
@@ -41,7 +41,8 @@ void Fruit::calculateTax(ofstream& out){
 
   dailySalesTax += eachSalesTax;
 
-  out << setw(64)<< right << fixed << setprecision(2) << eachSalesTax << endl;
+  out << setw(64)<< right << fixed << setprecision(2) << eachSalesTax 
+      << endl;
 }
 
 void Fruit::calculateSale(ofstream& out){
@@ -51,10 +52,19 @@ void Fruit::calculateSale(ofstream& out){
   totalFruitSales+=eachSale;
 
   out << setw(75) << left << "     Total: " 
-      << right << fixed << setprecision(2) << total << endl <<endl;
+      << right << fixed << setprecision(2) << total 
+      << endl <<endl;
 }
 
 void Fruit::printReceipt(ofstream& out){
-  out << setw(75) << left << name << right << eachSale << endl
+  if(weight == 0 && pricePerlb == 0){
+    eachSale = pricePerEach * howMany;
+  }
+  else{
+      eachSale = pricePerlb * weight;
+  }
+
+  out << setw(75) << left << name 
+      << right << fixed << setprecision(2) <<eachSale << endl
       << left <<"    Sales Tax: ";
 }
