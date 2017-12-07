@@ -40,16 +40,21 @@ class ProduceStand
 
 
   public:
+    //constructors
     ProduceStand();
     ProduceStand(string, double, double, double, int);
+    //destructor
     virtual ~ProduceStand();
 
+    //setters
     void setStandName(string);
     string getStandName();
-
+    //getters
     static double getDailySales();
     static double getDailySalesTax();
     static int getReceiptNum();
+  
+    //print functions for the header and producestand variables
     void printHeader(ofstream&);
     void printStats(ofstream&);
 };
